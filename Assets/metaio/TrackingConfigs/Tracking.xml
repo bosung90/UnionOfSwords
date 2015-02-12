@@ -7,7 +7,7 @@
                 <MarkerTrackingParameters>
                     <TrackingQuality>robust</TrackingQuality>
                     <ThresholdOffset>120</ThresholdOffset>
-                    <NumberOfSearchIterations>5</NumberOfSearchIterations>
+                    <NumberOfSearchIterations>12</NumberOfSearchIterations>
                 </MarkerTrackingParameters>
             </Parameters>
             <SensorCOS>
@@ -129,7 +129,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -171,7 +171,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -213,7 +213,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -255,7 +255,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -297,7 +297,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -339,7 +339,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -381,7 +381,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -423,7 +423,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -465,7 +465,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -507,7 +507,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -549,7 +549,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
@@ -591,7 +591,7 @@
                     <AlphaTranslation>1.0</AlphaTranslation>
                     <GammaRotation>0.8</GammaRotation>
                     <GammaTranslation>1.0</GammaTranslation>
-                    <KeepPoseForNumberOfFrames>0</KeepPoseForNumberOfFrames>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
                 </Parameters>
             </Fuser>
             <SensorSource>
