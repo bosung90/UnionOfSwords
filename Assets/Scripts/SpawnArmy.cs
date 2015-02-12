@@ -37,7 +37,7 @@ public class SpawnArmy : MonoBehaviour{
 		newUnit.tag = this.player.ToString ();
 		if (this.player == PlayerBase.PlayerNum.PlayerOne)
 			newUnit.renderer.material.color = Color.red;
-		else
+		else if (this.player == PlayerBase.PlayerNum.PlayerTwo)
 			newUnit.renderer.material.color = Color.blue;
 	}
 
