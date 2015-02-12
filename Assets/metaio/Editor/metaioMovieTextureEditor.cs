@@ -19,9 +19,8 @@ public class metaioMovieTextureEditor : Editor
 		
 		bool mustRepaint = false;
 		
-		
-		EditorGUIUtility.LookLikeControls(200);
-		
+		EditorGUIUtility.labelWidth = 200;
+
 		EditorGUILayout.Separator();
 		EditorGUILayout.LabelField("Movie texture source:");
         movieTextureScript.movieAssetIndex = EditorGUILayout.Popup("", movieTextureScript.movieAssetIndex, metaioMovieTexture.movieAssets, EditorStyles.popup);
