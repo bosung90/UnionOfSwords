@@ -27,6 +27,7 @@ public class SpawnArmy : MonoBehaviour{
 		if(isAlive == false)
 		{
 			CancelInvoke();
+			return;
 		}
 
 		GameObject newUnit = Instantiate (Unit) as GameObject;
@@ -46,7 +47,6 @@ public class SpawnArmy : MonoBehaviour{
 		if(Health <=0)
 		{
 			isAlive = false;
-
 		}
 	}
 }
