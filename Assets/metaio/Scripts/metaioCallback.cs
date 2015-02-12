@@ -7,7 +7,9 @@ using metaio.unitycommunication.util;
 
 public class metaioCallback : MonoBehaviour 
 {
-	
+
+	public GameObject[] metaioTrackers;
+
 #region metaio SDK callbacks
 	
 	/// <summary>
@@ -25,6 +27,13 @@ public class metaioCallback : MonoBehaviour
 	/// </param>
 	virtual protected void onTrackingEvent(List<TrackingValues> trackingValues)
 	{
+		foreach(TrackingValues t in trackingValues)
+		{
+			if(t.state == TrackingState.Found)
+				metaioTrackers[t.coordinateSystemID-1].SetActive(true);
+			else if(t.state == TrackingState.Lost)
+				metaioTrackers[t.coordinateSystemID-1].SetActive(false);
+		}
 	}
 	
 	/// <summary>
