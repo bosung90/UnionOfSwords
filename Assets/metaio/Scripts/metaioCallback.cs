@@ -30,7 +30,10 @@ public class metaioCallback : MonoBehaviour
 		foreach(TrackingValues t in trackingValues)
 		{
 			if(t.state == TrackingState.Found)
+			{
 				metaioTrackers[t.coordinateSystemID-1].SetActive(true);
+				metaioTrackers[t.coordinateSystemID-1].renderer.enabled = true;
+			}
 			else if(t.state == TrackingState.Lost)
 				metaioTrackers[t.coordinateSystemID-1].SetActive(false);
 		}
