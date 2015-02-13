@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class HPBarDamageable : MonoBehaviour {
+public class HealthBar : MonoBehaviour {
 
 	Image healthBar;
-//	public Damageable damageable;
+	public Targetable health;
 	
 	void Start () {
 		healthBar = GetComponent<Image> ();
@@ -13,6 +13,6 @@ public class HPBarDamageable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		healthBar.fillAmount = damageable.CurHealth / (float)damageable.MaxHealth;
+		healthBar.fillAmount = health.Health / (float)health.MaxHealth;
 	}
 }
