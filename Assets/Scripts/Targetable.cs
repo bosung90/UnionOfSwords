@@ -9,7 +9,10 @@ public class Targetable : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		if (player == PlayerBase.PlayerNum.PlayerOne)
+			this.renderer.material.color = Color.red;
+		else if(player == PlayerBase.PlayerNum.PlayerTwo)
+			this.renderer.material.color = Color.blue;
 	}
 	
 	// Update is called once per frame

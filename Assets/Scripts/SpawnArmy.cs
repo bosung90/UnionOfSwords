@@ -35,10 +35,8 @@ public class SpawnArmy : MonoBehaviour{
 		newUnit.transform.position = this.transform.position;
 		//set newUnit's tag to be same as spawnCircle tag string literal.
 		newUnit.tag = this.player.ToString ();
-		if (this.player == PlayerBase.PlayerNum.PlayerOne)
-			newUnit.renderer.material.color = Color.red;
-		else if (this.player == PlayerBase.PlayerNum.PlayerTwo)
-			newUnit.renderer.material.color = Color.blue;
+		Targetable targetable = newUnit.GetComponent<Targetable> ();
+		targetable.player = this.player;
 	}
 
 	public void ApplyDamage (int d)
