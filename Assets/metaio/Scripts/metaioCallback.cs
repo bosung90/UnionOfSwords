@@ -29,7 +29,9 @@ public class metaioCallback : MonoBehaviour
 	{
 		foreach(TrackingValues t in trackingValues)
 		{
-			if(t.state == TrackingState.Found)
+			if(metaioTrackers[t.coordinateSystemID-1] == null) {
+				continue;
+			}else if(t.state == TrackingState.Found)
 			{
 				metaioTrackers[t.coordinateSystemID-1].SetActive(true);
 				metaioTrackers[t.coordinateSystemID-1].renderer.enabled = true;

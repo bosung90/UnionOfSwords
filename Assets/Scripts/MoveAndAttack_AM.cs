@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveAndAttack : MonoBehaviour 
+public class MoveAndAttack_AM : MonoBehaviour 
 {
 	private GameObject enemyBase;
+	public GameObject arcane;
 	private string enemyTag;
 	private bool canAttack = true;
 
@@ -57,7 +58,13 @@ public class MoveAndAttack : MonoBehaviour
 			{
 				//call attack(target)		
 				Debug.Log("Attack");
-				target.SendMessage("ApplyDamage", AttackDamage, SendMessageOptions.DontRequireReceiver);
+				GameObject _arcane = Instantiate(arcane) as GameObject;
+				_arcane.transform.position = transform.position;
+				Arcane a = _arcane.GetComponent<Arcane>();
+				a.enemy = target.gameObject;
+				a.originalPos = this.transform.position;
+				a.finalPos = target.gameObject.transform.position;
+				a.attackDamage = this.AttackDamage;
 				canAttack = false;
 			}
 		}

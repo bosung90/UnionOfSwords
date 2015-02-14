@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveAndAttack : MonoBehaviour 
+public class MoveAndAttack_DM : MonoBehaviour 
 {
 	private GameObject enemyBase;
 	private string enemyTag;
@@ -13,8 +13,8 @@ public class MoveAndAttack : MonoBehaviour
 	public float AttackRange = 2;
 	[Range(0.01f, 5f)]
 	public float AttackSpeed = 2;
-	[Range(1, 200)]
-	public int AttackDamage = 10;
+	[Range(0.01f, 1f)]
+	public float AttackPercentDamage = .15f;
 
 	// Use this for initialization
 	void Start () 
@@ -39,6 +39,7 @@ public class MoveAndAttack : MonoBehaviour
 			{
 				//find playerTwo Base
 				enemyBase = GameObject.FindGameObjectWithTag("Player2Base");
+
 			}
 			else if(this.gameObject.tag == PlayerBase.PlayerNum.PlayerTwo.ToString())
 			{
@@ -57,7 +58,7 @@ public class MoveAndAttack : MonoBehaviour
 			{
 				//call attack(target)		
 				Debug.Log("Attack");
-				target.SendMessage("ApplyDamage", AttackDamage, SendMessageOptions.DontRequireReceiver);
+				target.SendMessage("ApplyPercentDamage", AttackPercentDamage, SendMessageOptions.DontRequireReceiver);
 				canAttack = false;
 			}
 		}

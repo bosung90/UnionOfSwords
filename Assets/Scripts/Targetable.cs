@@ -28,4 +28,13 @@ public class Targetable : MonoBehaviour {
 			Destroy (this.gameObject);
 		}
 	}
+
+	public void ApplyPercentDamage (float d)
+	{
+		Health -= (int) (MaxHealth * d);
+		if (Health <= 0) 
+		{
+			Destroy (this.gameObject);
+		}
+	}
 }

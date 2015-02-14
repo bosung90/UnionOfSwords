@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveAndAttack : MonoBehaviour 
+public class MoveAndAttack_Ranger : MonoBehaviour 
 {
 	private GameObject enemyBase;
+	public GameObject arrow;
 	private string enemyTag;
 	private bool canAttack = true;
 
@@ -57,7 +58,13 @@ public class MoveAndAttack : MonoBehaviour
 			{
 				//call attack(target)		
 				Debug.Log("Attack");
-				target.SendMessage("ApplyDamage", AttackDamage, SendMessageOptions.DontRequireReceiver);
+				GameObject _arrow = Instantiate(arrow) as GameObject;
+				_arrow.transform.position = transform.position;
+				Arrow a = _arrow.GetComponent<Arrow>();
+				a.enemy = target.gameObject;
+				a.originalPos = this.transform.position;
+				a.finalPos = target.gameObject.transform.position;
+				a.attackDamage = this.AttackDamage;
 				canAttack = false;
 			}
 		}
