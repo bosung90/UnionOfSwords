@@ -14,7 +14,7 @@
                 <SensorCosID>IDMarker_1</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>1</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -23,7 +23,7 @@
                 <SensorCosID>IDMarker_2</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>2</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -32,7 +32,7 @@
                 <SensorCosID>IDMarker_3</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>3</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -41,7 +41,7 @@
                 <SensorCosID>IDMarker_4</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>4</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -50,7 +50,7 @@
                 <SensorCosID>IDMarker_5</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>5</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -59,7 +59,7 @@
                 <SensorCosID>IDMarker_6</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>6</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -68,7 +68,7 @@
                 <SensorCosID>IDMarker_7</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>7</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -77,7 +77,7 @@
                 <SensorCosID>IDMarker_8</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>8</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -86,7 +86,7 @@
                 <SensorCosID>IDMarker_9</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>9</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -95,7 +95,7 @@
                 <SensorCosID>IDMarker_10</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>10</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -104,7 +104,7 @@
                 <SensorCosID>IDMarker_11</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>11</MatrixID>
                     </MarkerParameters>
                 </Parameters>
@@ -113,8 +113,170 @@
                 <SensorCosID>IDMarker_12</SensorCosID>
                 <Parameters>
                     <MarkerParameters>
-                        <Size>40</Size>
+                        <Size>20</Size>
                         <MatrixID>12</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_13</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>13</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_14</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>14</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_15</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>15</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_16</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>16</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_17</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>17</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_18</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>18</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_19</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>19</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_20</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>20</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_21</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>21</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_22</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>22</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_23</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>23</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_24</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>24</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_25</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>25</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_26</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>26</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_27</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>27</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_28</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>28</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_29</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>29</MatrixID>
+                    </MarkerParameters>
+                </Parameters>
+            </SensorCOS>
+			<SensorCOS>
+                <SensorCosID>IDMarker_30</SensorCosID>
+                <Parameters>
+                    <MarkerParameters>
+                        <Size>20</Size>
+                        <MatrixID>30</MatrixID>
                     </MarkerParameters>
                 </Parameters>
             </SensorCOS>
@@ -597,6 +759,762 @@
             <SensorSource>
                 <SensorID>MarkerBasedSensorSource_0</SensorID>
                 <SensorCosID>IDMarker_12</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 13</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_13</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 14</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_14</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 15</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_15</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 16</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_16</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 17</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_17</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 18</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_18</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 19</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_19</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 20</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_20</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 21</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_21</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 22</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_22</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 23</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_23</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 24</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_24</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 25</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_25</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 26</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_26</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 27</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_27</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 28</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_28</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 29</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_29</SensorCosID>
+                <HandEyeCalibration>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </HandEyeCalibration>
+                <COSOffset>
+                    <TranslationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                    </TranslationOffset>
+                    <RotationOffset>
+                        <x>0.0</x>
+                        <y>0.0</y>
+                        <z>0.0</z>
+                        <w>1.0</w>
+                    </RotationOffset>
+                </COSOffset>
+            </SensorSource>
+        </COS>
+		<COS>
+            <Name>ID marker 30</Name>
+            <Fuser Type="SmoothingFuser">
+                <Parameters>
+                    <AlphaRotation>0.8</AlphaRotation>
+                    <AlphaTranslation>1.0</AlphaTranslation>
+                    <GammaRotation>0.8</GammaRotation>
+                    <GammaTranslation>1.0</GammaTranslation>
+                    <KeepPoseForNumberOfFrames>10</KeepPoseForNumberOfFrames>
+                </Parameters>
+            </Fuser>
+            <SensorSource>
+                <SensorID>MarkerBasedSensorSource_0</SensorID>
+                <SensorCosID>IDMarker_30</SensorCosID>
                 <HandEyeCalibration>
                     <TranslationOffset>
                         <x>0.0</x>
