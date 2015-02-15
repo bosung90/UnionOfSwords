@@ -14,7 +14,7 @@ public class Resource : MonoBehaviour {
 	void Start () {
 		resource = GetComponent<Text> ();
 		resource.text = "Resource : " + 20;
-		InvokeRepeating ("income", 0, 1);
+		InvokeRepeating ("income", 0, 4);
 	}
 	
 	// Update is called once per frame

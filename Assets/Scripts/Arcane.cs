@@ -21,6 +21,8 @@ public class Arcane : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		delayTime += Time.deltaTime;
+		if(enemy == null && delayTime > 1f)
+			Destroy (this.gameObject);
 		if(enemy != null)
 		{
 			finalPos = enemy.transform.position;
@@ -28,7 +30,7 @@ public class Arcane : MonoBehaviour {
 
 		if (delayTime > 1f) 
 		{
-			
+
 			enemy.SendMessage ("ApplyDamage", attackDamage, SendMessageOptions.DontRequireReceiver);
 			Destroy (this.gameObject);
 		}

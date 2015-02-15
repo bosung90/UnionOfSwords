@@ -48,6 +48,11 @@ public class Targetable : MonoBehaviour {
 		Health -= d;
 		if(Health <=0)
 		{
+			if(type == PlayerBase.UnitType.Turret && player == PlayerBase.PlayerNum.PlayerOne)
+				WhohasWon.winner = "PLAYER 2 WINNER!";
+			else if(type == PlayerBase.UnitType.Turret && player == PlayerBase.PlayerNum.PlayerTwo)
+				WhohasWon.winner = "PLAYER 1 WINNER!";
+
 			if(animation!=null)
 				animation.Play("Dead", PlayMode.StopAll);
 			Destroy (this.gameObject, 1f);
@@ -64,6 +69,11 @@ public class Targetable : MonoBehaviour {
 		Health -= (int) (MaxHealth * d);
 		if(Health <=0)
 		{
+			if(type == PlayerBase.UnitType.Turret && player == PlayerBase.PlayerNum.PlayerOne)
+				WhohasWon.winner = "PLAYER 2 WINNER!";
+			else if(type == PlayerBase.UnitType.Turret && player == PlayerBase.PlayerNum.PlayerTwo)
+				WhohasWon.winner = "PLAYER 1 WINNER!";
+
 			if(animation!=null)
 				animation.Play("Dead", PlayMode.StopAll);
 			Destroy (this.gameObject, 1f);

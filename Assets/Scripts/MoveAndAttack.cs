@@ -9,7 +9,7 @@ public class MoveAndAttack : MonoBehaviour
 	
 	public PlayerBase.AttackType attackType;
 	
-	[Range(0f,15f)]
+	[Range(0f,100f)]
 	public float speed = 2;
 	[Range(0.5f, 100f)]
 	public float AttackRange = 2;
