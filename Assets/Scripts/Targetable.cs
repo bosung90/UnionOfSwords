@@ -35,16 +35,24 @@ public class Targetable : MonoBehaviour {
 		Health -= d;
 		if(Health <=0)
 		{
-			Destroy (this.gameObject);
+			animation.Play("Dead", PlayMode.StopAll);
+			Destroy (this.gameObject, 1f);
+			collider.enabled = false;
+			return;
 		}
+		animation.Play("Damage", PlayMode.StopAll);
 	}
 
 	public void ApplyPercentDamage (float d)
 	{
 		Health -= (int) (MaxHealth * d);
-		if (Health <= 0) 
+		if(Health <=0)
 		{
-			Destroy (this.gameObject);
+			animation.Play("Dead", PlayMode.StopAll);
+			Destroy (this.gameObject, 1f);
+			collider.enabled = false;
+			return;
 		}
+		animation.Play("Damage", PlayMode.StopAll);
 	}
 }
