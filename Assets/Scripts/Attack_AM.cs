@@ -32,6 +32,10 @@ public class Attack_AM : MonoBehaviour {
 	void WalkAnimate(){
 		animation.Play ("walk", PlayMode.StopAll);
 	}
+
+	void StartAnimation() {
+		animation.Play ("combat_idle", PlayMode.StopAll);
+	}
 }
 
 

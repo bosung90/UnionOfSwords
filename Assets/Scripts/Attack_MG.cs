@@ -13,13 +13,13 @@ public class Attack_MG : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(!animation.isPlaying)
-			animation.Play("Idle_01",  PlayMode.StopAll);
+			animation.Play("combat_idle",  PlayMode.StopAll);
 	
 	}
 
 	void AttackAnimate(AttackInfo attackInfo){
 		attackInfo.Target.SendMessage ("ApplyDamage", attackInfo.AttackDamage, SendMessageOptions.DontRequireReceiver);
-		animation.Play ("Attack_01", PlayMode.StopAll);
+		animation.Play ("Attack", PlayMode.StopAll);
 		giantSound.Play ();
 	}
 }

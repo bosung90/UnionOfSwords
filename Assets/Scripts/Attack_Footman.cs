@@ -21,6 +21,9 @@ public class Attack_Footman : MonoBehaviour {
 	}
 
 	void AttackAnimate(AttackInfo attackInfo){
+		if(animation != null) {
+			animation.Play ("Attack",  PlayMode.StopAll);
+		}
 		_particleSystem.Play (true);
 		swordSound.PlayDelayed (0.2f);
 		attackInfo.Target.SendMessage ("ApplyDamage", attackInfo.AttackDamage, SendMessageOptions.DontRequireReceiver);
@@ -28,5 +31,9 @@ public class Attack_Footman : MonoBehaviour {
 
 	void WalkAnimate(){
 		animation.Play ("Walk", PlayMode.StopAll);
+	}
+
+	void StartAnimation() {
+		animation.Play ("Wait", PlayMode.StopAll);
 	}
 }

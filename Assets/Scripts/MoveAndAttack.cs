@@ -41,8 +41,9 @@ public class MoveAndAttack : MonoBehaviour
 
 						
 		if(animation != null) {
-			if(!animation.isPlaying)
-				animation.Play("Wait",  PlayMode.StopAll);
+			if(!animation.isPlaying) {
+				this.BroadcastMessage("StartAnimation", SendMessageOptions.DontRequireReceiver);
+			}
 		}
 		
 		if(enemyBase == null)
@@ -72,9 +73,6 @@ public class MoveAndAttack : MonoBehaviour
 				//call attack(target)		
 				Debug.Log("Attack");
 				target.SendMessage("ApplyDamage", AttackDamage, SendMessageOptions.DontRequireReceiver);
-				if(animation != null) {
-					animation.Play ("Attack",  PlayMode.StopAll);
-				}
 				this.transform.LookAt(target.transform, Vector3.up);
 				//this.BroadcastMessage("AttackAnimate", SendMessageOptions.DontRequireReceiver);
 				this.BroadcastMessage("AttackAnimate", new AttackInfo(target.gameObject, AttackDamage), SendMessageOptions.DontRequireReceiver);
