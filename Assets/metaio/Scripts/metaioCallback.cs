@@ -40,8 +40,10 @@ public class metaioCallback : MonoBehaviour
 				{
 					GameObject child = tracker.transform.GetChild(i).gameObject;
 					child.SetActive(true);
-					if(child.renderer!=null)
-						child.renderer.enabled = true;
+				}
+				foreach(Renderer r in tracker.GetComponentsInChildren<Renderer>())
+				{
+					r.enabled = true;
 				}
 			}
 			else if(t.state == TrackingState.Lost)
@@ -50,11 +52,12 @@ public class metaioCallback : MonoBehaviour
 				{
 					GameObject child = tracker.transform.GetChild(i).gameObject;
 					child.SetActive(false);
+
 				}
 			}
 		}
 	}
-	
+
 	/// <summary>
 	/// This callback reports the result of instant tracking, i.e. when
 	/// startInstantTracking is called.
