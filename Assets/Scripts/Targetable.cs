@@ -7,22 +7,8 @@ public class Targetable : MonoBehaviour {
 	public int MaxHealth = 100;
 	public PlayerBase.PlayerNum player;
 	public PlayerBase.UnitType type;
-	[Range(1, 100)]
-	public int Footman_Cost = 3;
-	[Range(1, 100)]
-	public int Ranger_Cost = 3;
-	[Range(1, 100)]
-	public int A_Magician_Cost = 3;
-	[Range(1, 100)]
-	public int M_Giant_Cost = 3;
-	[Range(1, 100)]
-	public int Dragon_Cost = 3;
-	[Range(1, 100)]
-	public int Warlock_Cost = 3;
-	[Range(1, 200)]
-	public int Tower_Cost = 3;
-
-
+	[Range(0,100)]
+	public int StatusCost = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -48,7 +34,16 @@ public class Targetable : MonoBehaviour {
 	
 	}
 
-	public void ApplyDamage (int d)
+	public void ApplyDamage(float d)
+	{
+		if(type == PlayerBase.UnitType.Warlock)
+			ApplyPercentDamage(d);
+		else
+			ApplyFlatDamage((int) d);
+	}
+
+
+	public void ApplyFlatDamage (int d)
 	{
 		Health -= d;
 		if(Health <=0)
@@ -83,37 +78,11 @@ public class Targetable : MonoBehaviour {
 	public void getResource() {
 		if(player == PlayerBase.PlayerNum.PlayerTwo) 
 		{
-			if(type == PlayerBase.UnitType.Footman)
-				Resource.currentResource_P1 += Footman_Cost;
-			else if(type == PlayerBase.UnitType.Ranger)
-				Resource.currentResource_P1 += Ranger_Cost;
-			else if(type == PlayerBase.UnitType.Arcane_Magician)
-				Resource.currentResource_P1 += A_Magician_Cost;
-			else if(type == PlayerBase.UnitType.Mountain_Giant)
-				Resource.currentResource_P1 += M_Giant_Cost;
-			else if(type == PlayerBase.UnitType.Dragon_Rider)
-				Resource.currentResource_P1 += Dragon_Cost;
-			else if(type == PlayerBase.UnitType.Warlock)
-				Resource.currentResource_P1 += Warlock_Cost;
-			else if(type == PlayerBase.UnitType.Turret)
-				Resource.currentResource_P1 += Tower_Cost;
+			Resource.currentResource_P1 += StatusCost;
 		}
 		else if(player == PlayerBase.PlayerNum.PlayerOne)
 		{
-			if(type == PlayerBase.UnitType.Footman)
-				Resource.currentResource_P2 += Footman_Cost;
-			else if(type == PlayerBase.UnitType.Ranger)
-				Resource.currentResource_P2 += Ranger_Cost;
-			else if(type == PlayerBase.UnitType.Arcane_Magician)
-				Resource.currentResource_P2 += A_Magician_Cost;
-			else if(type == PlayerBase.UnitType.Mountain_Giant)
-				Resource.currentResource_P2 += M_Giant_Cost;
-			else if(type == PlayerBase.UnitType.Dragon_Rider)
-				Resource.currentResource_P2 += Dragon_Cost;
-			else if(type == PlayerBase.UnitType.Warlock)
-				Resource.currentResource_P2 += Warlock_Cost;
-			else if(type == PlayerBase.UnitType.Turret)
-				Resource.currentResource_P2 += Tower_Cost;
+			Resource.currentResource_P2 += StatusCost;
 		}
 	}
 

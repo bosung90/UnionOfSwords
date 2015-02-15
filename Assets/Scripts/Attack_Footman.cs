@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AttackParticleScript : MonoBehaviour {
+public class Attack_Footman : MonoBehaviour {
 
 	AudioSource swordSound;
 
