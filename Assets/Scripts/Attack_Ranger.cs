@@ -24,12 +24,12 @@ public class Attack_Ranger : MonoBehaviour {
 		a.finalPos = AttackInfo.Target.transform.position;
 		a.attackDamage = AttackInfo.AttackDamage;
 	}
-	void StartAnimation() {
-		animation.Play ("001-01_idle01", PlayMode.StopAll);
-	}
-	void WalkAnimate(){
-		animation.Play("002_walk01",PlayMode.StopAll);
-	}
+//	void StartAnimation() {
+//		animation.Play ("001-01_idle01", PlayMode.StopAll);
+//	}
+//	void WalkAnimate(){
+//		animation.Play("002_walk01",PlayMode.StopAll);
+//	}
 }
 
 public class AttackInfo {
