@@ -80,6 +80,7 @@ public class MoveAndAttack : MonoBehaviour
 			float step = speed * Time.deltaTime;
 			transform.position = Vector3.MoveTowards (currentPos, enemyBasePos, step);
 			animation.Play ("Walk",  PlayMode.StopAll);
+			this.BroadcastMessage("WalkAnimate", SendMessageOptions.DontRequireReceiver);
 			this.transform.LookAt(enemyBasePos, Vector3.up);
 		}
 	}
