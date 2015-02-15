@@ -8,6 +8,7 @@ public class SpawnArmy : MonoBehaviour{
 	public float SpawnTimer = 3;
 
 	public PlayerBase.PlayerNum player;
+	public PlayerBase.UnitType type;
 
 	public int Health = 100;
 	public int MaxHealth = 100;
@@ -15,7 +16,7 @@ public class SpawnArmy : MonoBehaviour{
 	[Range(0,15)]
 	public int StatusCost = 1;
 
-	private bool isAlive = true;
+
 
 	// Use this for initialization
 	void Start () {
@@ -24,12 +25,106 @@ public class SpawnArmy : MonoBehaviour{
 
 	private void SpawnUnit()
 	{
-		if(isAlive == false)
+		if(player == PlayerBase.PlayerNum.PlayerOne)
 		{
-			CancelInvoke();
-			return;
-		}
+			switch(type)
+			{
+			case PlayerBase.UnitType.Footman:
+					if(Resource_P1.currentResource >= 5) 
+					{
+						SpwnUnit();
+						Resource_P1.currentResource -= 5;
+					}
+				break;
+			case PlayerBase.UnitType.Ranger:
+					if(Resource_P1.currentResource >= 6) 
+					{
+						SpwnUnit();
+						Resource_P1.currentResource -= 6;
+					}
+				break;
+			case PlayerBase.UnitType.Arcane_Magician:
+					if(Resource_P1.currentResource >= 6) 
+					{
+						SpwnUnit();
+						Resource_P1.currentResource -= 6;
+					}
+				break;
+			case PlayerBase.UnitType.Mountain_Giant:
+					if(Resource_P1.currentResource >= 25) 
+					{
+						SpwnUnit();
+						Resource_P1.currentResource -= 25;
+					}
+				break;
+			case PlayerBase.UnitType.Dragon_Rider:
+					if(Resource_P1.currentResource >= 60) 
+					{
+						SpwnUnit();
+						Resource_P1.currentResource -= 60;
+					}
+				break;
+			case PlayerBase.UnitType.Warlock:
+					if(Resource_P1.currentResource >= 40) 
+					{
+						SpwnUnit();
+						Resource_P1.currentResource -= 40;
+					}
+				break;
 
+			}
+		}else if(player == PlayerBase.PlayerNum.PlayerTwo)
+		{
+			switch(type)
+			{
+			case PlayerBase.UnitType.Footman:
+				if(Resource_P2.currentResource >= 5) 
+				{
+					SpwnUnit();
+					Resource_P2.currentResource -= 5;
+				}
+				break;
+			case PlayerBase.UnitType.Ranger:
+				if(Resource_P2.currentResource >= 6) 
+				{
+					SpwnUnit();
+					Resource_P2.currentResource -= 6;
+				}
+				break;
+			case PlayerBase.UnitType.Arcane_Magician:
+				if(Resource_P2.currentResource >= 6) 
+				{
+					SpwnUnit();
+					Resource_P2.currentResource -= 6;
+				}
+				break;
+			case PlayerBase.UnitType.Mountain_Giant:
+				if(Resource_P2.currentResource >= 25) 
+				{
+					SpwnUnit();
+					Resource_P2.currentResource -= 25;
+				}
+				break;
+			case PlayerBase.UnitType.Dragon_Rider:
+				if(Resource_P2.currentResource >= 60) 
+				{
+					SpwnUnit();
+					Resource_P2.currentResource -= 60;
+				}
+				break;
+			case PlayerBase.UnitType.Warlock:
+				if(Resource_P2.currentResource >= 40) 
+				{
+					SpwnUnit();
+					Resource_P2.currentResource -= 40;
+				}
+				break;
+				
+			}
+		}
+	}
+
+	private void SpwnUnit() {
 		GameObject newUnit = Instantiate (Unit) as GameObject;
 		//set newUnit's position to be at the SpawnCircle.
 		newUnit.transform.position = this.transform.position;
@@ -39,12 +134,4 @@ public class SpawnArmy : MonoBehaviour{
 		targetable.player = this.player;
 	}
 
-	public void ApplyDamage (int d)
-	{
-		Health -= d;
-		if(Health <=0)
-		{
-			isAlive = false;
-		}
-	}
 }
