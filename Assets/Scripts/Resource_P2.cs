@@ -12,11 +12,16 @@ public class Resource_P2 : MonoBehaviour {
 		resource = GetComponent<Text> ();
 		currentResource = 20;
 		resource.text = "Resource : " + currentResource;
+		InvokeRepeating ("income", 0, 1);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		resource.text = "Resource : " + currentResource;
+		
+	}
 	
+	private void income() {
+		currentResource += 2;
 	}
 }
