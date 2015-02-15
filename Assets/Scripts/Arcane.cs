@@ -36,6 +36,7 @@ public class Arcane : MonoBehaviour {
 		Vector3 _position = Vector3.Lerp (originalPos, finalPos, delayTime);
 
 		transform.position = _position;
+		
 
 	
 	}

@@ -15,14 +15,14 @@ public class Attack_Ranger : MonoBehaviour {
 	
 	}
 
-	void AttackAnimate(AttackInfo AttackInfo){
+	void AttackAnimate(AttackInfo _attackInfo){
 		GameObject _arrow = Instantiate(arrow) as GameObject;
 		_arrow.transform.position = transform.position;
 		Arrow a = _arrow.GetComponent<Arrow>();
-		a.enemy = AttackInfo.Target;
+		a.enemy = _attackInfo.Target;
 		a.originalPos = this.transform.position;
-		a.finalPos = AttackInfo.Target.transform.position;
-		a.attackDamage = AttackInfo.AttackDamage;
+		a.finalPos = _attackInfo.Target.transform.position;
+		a.attackDamage = _attackInfo.AttackDamage;
 	}
 }
 

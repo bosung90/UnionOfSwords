@@ -23,9 +23,11 @@ public class MoveAndAttack : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		//		animation = GetComponent<Animation> ();
-		enemyTag = (this.gameObject.tag == PlayerBase.PlayerNum.PlayerOne.ToString ()) ? PlayerBase.PlayerNum.PlayerTwo.ToString () : PlayerBase.PlayerNum.PlayerOne.ToString ();
-		
+		if(this.gameObject.tag == PlayerBase.PlayerNum.PlayerOne.ToString () || this.gameObject.tag == PlayerBase.PlayerNum.PlayerTwo.ToString ())
+			enemyTag = (this.gameObject.tag == PlayerBase.PlayerNum.PlayerOne.ToString ()) ? PlayerBase.PlayerNum.PlayerTwo.ToString () : PlayerBase.PlayerNum.PlayerOne.ToString ();
+		else
+			enemyTag = (this.gameObject.tag == "Player1Base") ? PlayerBase.PlayerNum.PlayerTwo.ToString () : PlayerBase.PlayerNum.PlayerOne.ToString ();
+
 		
 		InvokeRepeating ("ResetAttack", 0, AttackSpeed);
 	}
@@ -60,7 +62,8 @@ public class MoveAndAttack : MonoBehaviour
 			}
 			if(enemyBase == null)
 			{
-				return;
+				if(this.GetComponent<Targetable>().type != PlayerBase.UnitType.Turret)
+					return;
 			}
 		}
 		
@@ -72,7 +75,7 @@ public class MoveAndAttack : MonoBehaviour
 			{
 				//call attack(target)		
 				Debug.Log("Attack");
-				target.SendMessage("ApplyDamage", AttackDamage, SendMessageOptions.DontRequireReceiver);
+				//target.SendMessage("ApplyDamage", AttackDamage, SendMessageOptions.DontRequireReceiver);
 				this.transform.LookAt(target.transform, Vector3.up);
 				//this.BroadcastMessage("AttackAnimate", SendMessageOptions.DontRequireReceiver);
 				this.BroadcastMessage("AttackAnimate", new AttackInfo(target.gameObject, AttackDamage), SendMessageOptions.DontRequireReceiver);
@@ -81,16 +84,17 @@ public class MoveAndAttack : MonoBehaviour
 		}
 		// move towards enemy base
 		else 
-		{
-			Vector3 currentPos = transform.position;
-			Vector3 enemyBasePos = enemyBase.transform.position;
-			float step = speed * Time.deltaTime;
-			transform.position = Vector3.MoveTowards (currentPos, enemyBasePos, step);
-			if(animation != null) {
-				animation.Play ("Walk",  PlayMode.StopAll);
+		{ 
+			if(this.GetComponent<Targetable>().type != PlayerBase.UnitType.Turret)
+			{
+				Vector3 currentPos = transform.position;
+				Vector3 enemyBasePos = enemyBase.transform.position;
+				float step = speed * Time.deltaTime;
+				transform.position = Vector3.MoveTowards (currentPos, enemyBasePos, step);
+				this.BroadcastMessage("WalkAnimate", SendMessageOptions.DontRequireReceiver);
+				this.transform.LookAt(enemyBasePos, Vector3.up);
 			}
-			this.BroadcastMessage("WalkAnimate", SendMessageOptions.DontRequireReceiver);
-			this.transform.LookAt(enemyBasePos, Vector3.up);
+
 		}
 	}
 	
@@ -99,13 +103,31 @@ public class MoveAndAttack : MonoBehaviour
 		float smallestDistance = float.MaxValue;
 		Collider closestTarget = null;
 		Collider[] cols = Physics.OverlapSphere(transform.position, AttackRange);
-		foreach (Collider col in cols)
+		if(enemyBase != null) 
 		{
-			if (col && ( col.tag == enemyTag || col.tag == enemyBase.tag))
+			foreach (Collider col in cols)
 			{
-				if(col.GetComponent<Targetable>().type == PlayerBase.UnitType.Dragon_Rider && attackType == PlayerBase.AttackType.Ground)
-					continue;
-				else
+				if (col && ( col.tag == enemyTag || col.tag == enemyBase.tag))
+				{
+					if(col.GetComponent<Targetable>().type == PlayerBase.UnitType.Dragon_Rider && attackType == PlayerBase.AttackType.Ground)
+						continue;
+					else
+					{
+						float distance = Vector3.Distance(transform.position, col.transform.position);
+						if(distance<smallestDistance)
+						{
+							smallestDistance = distance;
+							closestTarget = col;					
+						}
+					}
+					
+				}	
+			}
+		}else
+		{
+			foreach (Collider col in cols)
+			{
+				if (col && ( col.tag == enemyTag))
 				{
 					float distance = Vector3.Distance(transform.position, col.transform.position);
 					if(distance<smallestDistance)
@@ -113,10 +135,12 @@ public class MoveAndAttack : MonoBehaviour
 						smallestDistance = distance;
 						closestTarget = col;					
 					}
-				}
-				
-			}	
+
+					
+				}	
+			}
 		}
+
 		return closestTarget;
 	}
 }
