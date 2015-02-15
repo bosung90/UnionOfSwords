@@ -6,9 +6,9 @@ public class MoveAndAttack : MonoBehaviour
 	private GameObject enemyBase;
 	private string enemyTag;
 	private bool canAttack = true;
-
+	
 	public PlayerBase.AttackType attackType;
-
+	
 	[Range(0f,15f)]
 	public float speed = 2;
 	[Range(0.5f, 100f)]
@@ -17,19 +17,19 @@ public class MoveAndAttack : MonoBehaviour
 	public float AttackSpeed = 2;
 	[Range(1, 200)]
 	public float AttackDamage = 10f;
-
-//	private Animation animation;
-
+	
+	//	private Animation animation;
+	
 	// Use this for initialization
 	void Start () 
 	{
-//		animation = GetComponent<Animation> ();
+		//		animation = GetComponent<Animation> ();
 		enemyTag = (this.gameObject.tag == PlayerBase.PlayerNum.PlayerOne.ToString ()) ? PlayerBase.PlayerNum.PlayerTwo.ToString () : PlayerBase.PlayerNum.PlayerOne.ToString ();
-
-
+		
+		
 		InvokeRepeating ("ResetAttack", 0, AttackSpeed);
 	}
-
+	
 	private void ResetAttack()
 	{
 		canAttack = true;
@@ -40,7 +40,7 @@ public class MoveAndAttack : MonoBehaviour
 	{
 		if(!animation.isPlaying)
 			animation.Play("Wait",  PlayMode.StopAll);
-
+		
 		if(enemyBase == null)
 		{
 			if(this.gameObject.tag == PlayerBase.PlayerNum.PlayerOne.ToString())
@@ -58,7 +58,7 @@ public class MoveAndAttack : MonoBehaviour
 				return;
 			}
 		}
-
+		
 		// if there's any targetable object in range, stop and call attack method
 		Collider target = GetClosestTargetable ();
 		if(target != null)
@@ -68,17 +68,18 @@ public class MoveAndAttack : MonoBehaviour
 				//call attack(target)		
 				Debug.Log("Attack");
 				target.SendMessage("ApplyDamage", AttackDamage, SendMessageOptions.DontRequireReceiver);
-				canAttack = false;
+				
 				animation.Play ("Attack",  PlayMode.StopAll);
 				this.transform.LookAt(target.transform, Vector3.up);
-				this.BroadcastMessage("AttackAnimate", SendMessageOptions.DontRequireReceiver);
+				//this.BroadcastMessage("AttackAnimate", SendMessageOptions.DontRequireReceiver);
 				this.BroadcastMessage("AttackAnimate", new AttackInfo(target.gameObject, AttackDamage), SendMessageOptions.DontRequireReceiver);
+				canAttack = false;
 			}
 		}
 		// move towards enemy base
 		else 
 		{
-		    Vector3 currentPos = transform.position;
+			Vector3 currentPos = transform.position;
 			Vector3 enemyBasePos = enemyBase.transform.position;
 			float step = speed * Time.deltaTime;
 			transform.position = Vector3.MoveTowards (currentPos, enemyBasePos, step);
@@ -87,7 +88,7 @@ public class MoveAndAttack : MonoBehaviour
 			this.transform.LookAt(enemyBasePos, Vector3.up);
 		}
 	}
-
+	
 	private Collider GetClosestTargetable()
 	{
 		float smallestDistance = float.MaxValue;
@@ -108,7 +109,7 @@ public class MoveAndAttack : MonoBehaviour
 						closestTarget = col;					
 					}
 				}
-
+				
 			}	
 		}
 		return closestTarget;
