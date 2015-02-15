@@ -16,9 +16,12 @@ public class MoveAndAttack : MonoBehaviour
 	[Range(1, 200)]
 	public int AttackDamage = 10;
 
+//	private Animation animation;
+
 	// Use this for initialization
 	void Start () 
 	{
+//		animation = GetComponent<Animation> ();
 		enemyTag = (this.gameObject.tag == PlayerBase.PlayerNum.PlayerOne.ToString ()) ? PlayerBase.PlayerNum.PlayerTwo.ToString () : PlayerBase.PlayerNum.PlayerOne.ToString ();
 
 
@@ -33,6 +36,9 @@ public class MoveAndAttack : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		if(!animation.isPlaying)
+			animation.Play("Idle",  PlayMode.StopAll);
+
 		if(enemyBase == null)
 		{
 			if(this.gameObject.tag == PlayerBase.PlayerNum.PlayerOne.ToString())
@@ -46,7 +52,9 @@ public class MoveAndAttack : MonoBehaviour
 				enemyBase = GameObject.FindGameObjectWithTag("Player1Base");
 			}
 			if(enemyBase == null)
+			{
 				return;
+			}
 		}
 
 		// if there's any targetable object in range, stop and call attack method
@@ -59,6 +67,8 @@ public class MoveAndAttack : MonoBehaviour
 				Debug.Log("Attack");
 				target.SendMessage("ApplyDamage", AttackDamage, SendMessageOptions.DontRequireReceiver);
 				canAttack = false;
+				animation.Play ("Attack",  PlayMode.StopAll);
+				this.transform.LookAt(target.transform, Vector3.up);
 			}
 		}
 		// move towards enemy base
@@ -68,6 +78,8 @@ public class MoveAndAttack : MonoBehaviour
 			Vector3 enemyBasePos = enemyBase.transform.position;
 			float step = speed * Time.deltaTime;
 			transform.position = Vector3.MoveTowards (currentPos, enemyBasePos, step);
+			animation.Play ("Walk",  PlayMode.StopAll);
+			this.transform.LookAt(enemyBasePos, Vector3.up);
 		}
 	}
 
