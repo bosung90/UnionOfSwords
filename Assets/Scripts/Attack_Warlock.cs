@@ -10,8 +10,8 @@ public class Attack_Warlock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!animation.isPlaying)
-			animation.Play("001-01_idle01",  PlayMode.StopAll);	
+//		if(!animation.isPlaying)
+//			animation.Play("001-01_idle01",  PlayMode.StopAll);	
 	}
 
 	void AttackAnimate(AttackInfo attackInfo){
@@ -19,6 +19,6 @@ public class Attack_Warlock : MonoBehaviour {
 	}
 
 	void WalkAnimate(){
-		animation.Play ("002_walk01", PlayMode.StopAll);
+//		animation.Play ("002_walk01", PlayMode.StopAll);
 	}
 }
