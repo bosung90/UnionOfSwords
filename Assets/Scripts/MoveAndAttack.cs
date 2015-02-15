@@ -37,7 +37,7 @@ public class MoveAndAttack : MonoBehaviour
 	void Update () 
 	{
 		if(!animation.isPlaying)
-			animation.Play("Idle",  PlayMode.StopAll);
+			animation.Play("Wait",  PlayMode.StopAll);
 
 		if(enemyBase == null)
 		{
