@@ -49,18 +49,18 @@ public class SpawnArmy : MonoBehaviour{
 	{
 		if(player == PlayerBase.PlayerNum.PlayerOne)
 		{
-			if(Resource_P1.currentResource >= StatusCost)
+			if(Resource.currentResource_P1 >= StatusCost)
 			{
 				SpwnUnit();
-				Resource_P1.currentResource -= StatusCost;
+				Resource.currentResource_P1 -= StatusCost;
 			}
 		}
 		else if(player == PlayerBase.PlayerNum.PlayerTwo)
 		{
-			if(Resource_P2.currentResource >= StatusCost)
+			if(Resource.currentResource_P2 >= StatusCost)
 			{
 				SpwnUnit();
-				Resource_P2.currentResource -= StatusCost;
+				Resource.currentResource_P2 -= StatusCost;
 			}
 		}
 	}
