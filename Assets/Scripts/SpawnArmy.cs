@@ -68,6 +68,7 @@ public class SpawnArmy : MonoBehaviour{
 	private void SpwnUnit() {
 		GameObject newUnit = Instantiate (Unit) as GameObject;
 		//set newUnit's position to be at the SpawnCircle.
+		newUnit.BroadcastMessage ("DragonAppear", SendMessageOptions.DontRequireReceiver);
 		newUnit.transform.position = this.transform.position;
 		//set newUnit's tag to be same as spawnCircle tag string literal.
 		newUnit.tag = this.player.ToString ();

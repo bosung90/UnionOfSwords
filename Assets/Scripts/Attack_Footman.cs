@@ -24,4 +24,8 @@ public class Attack_Footman : MonoBehaviour {
 		swordSound.PlayDelayed (0.2f);
 		attackInfo.Target.SendMessage ("ApplyDamage", attackInfo.AttackDamage, SendMessageOptions.DontRequireReceiver);
 	}
+
+	void WalkAnimate(){
+		animation.Play ("walk", PlayMode.StopAll);
+	}
 }

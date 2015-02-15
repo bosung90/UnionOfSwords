@@ -4,9 +4,11 @@ using System.Collections;
 public class Attack_DR : MonoBehaviour {
 
 	public GameObject Fire;
+	AudioSource roar;
 
 	// Use this for initialization
 	void Start () {
+		roar = this.GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -22,5 +24,10 @@ public class Attack_DR : MonoBehaviour {
 		a.originalPos = this.transform.position;
 		a.finalPos = AttackInfo.Target.transform.position;
 		a.attackDamage = AttackInfo.AttackDamage;
+	}
+
+	void DragonAppear(){
+		//particleSystem.Play (true);
+		roar.Play ();
 	}
 }

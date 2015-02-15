@@ -13,6 +13,8 @@ public class Attack_AM : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(!animation.isPlaying)
+			animation.Play("combat_idle",  PlayMode.StopAll);
 	
 	}
 
@@ -24,6 +26,11 @@ public class Attack_AM : MonoBehaviour {
 		a.originalPos = this.transform.position;
 		a.finalPos = AttackInfo.Target.transform.position;
 		a.attackDamage = AttackInfo.AttackDamage;
+		animation.Play ("attack1", PlayMode.StopAll);
+	}
+
+	void WalkAnimate(){
+		animation.Play ("walk", PlayMode.StopAll);
 	}
 }
 
