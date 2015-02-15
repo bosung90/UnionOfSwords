@@ -37,13 +37,15 @@ public class Targetable : MonoBehaviour {
 		Health -= d;
 		if(Health <=0)
 		{
-			animation.Play("Dead", PlayMode.StopAll);
+			if(animation!=null)
+				animation.Play("Dead", PlayMode.StopAll);
 			Destroy (this.gameObject, 1f);
 			collider.enabled = false;
 			getResource();
 			return;
 		}
-		animation.Play("Damage", PlayMode.StopAll);
+		if(animation!=null)
+			animation.Play("Damage", PlayMode.StopAll);
 	}
 
 	public void ApplyPercentDamage (float d)
@@ -51,13 +53,15 @@ public class Targetable : MonoBehaviour {
 		Health -= (int) (MaxHealth * d);
 		if(Health <=0)
 		{
-			animation.Play("Dead", PlayMode.StopAll);
+			if(animation!=null)
+				animation.Play("Dead", PlayMode.StopAll);
 			Destroy (this.gameObject, 1f);
 			collider.enabled = false;
 			getResource();
 			return;
 		}
-		animation.Play("Damage", PlayMode.StopAll);
+		if(animation!=null)
+			animation.Play("Damage", PlayMode.StopAll);
 	}
 
 	public void getResource() {
