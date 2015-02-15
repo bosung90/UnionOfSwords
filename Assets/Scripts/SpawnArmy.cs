@@ -13,7 +13,7 @@ public class SpawnArmy : MonoBehaviour{
 	public int Health = 100;
 	public int MaxHealth = 100;
 
-	[Range(0,50)]
+	[Range(0,100)]
 	public int StatusCost = 1;
 
 	public GameObject particleSystemSpawn;

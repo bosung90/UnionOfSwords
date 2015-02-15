@@ -16,7 +16,7 @@ public class MoveAndAttack : MonoBehaviour
 	[Range(0.01f, 5f)]
 	public float AttackSpeed = 2;
 	[Range(1, 200)]
-	public int AttackDamage = 10;
+	public float AttackDamage = 10f;
 
 //	private Animation animation;
 
@@ -72,6 +72,7 @@ public class MoveAndAttack : MonoBehaviour
 				animation.Play ("Attack",  PlayMode.StopAll);
 				this.transform.LookAt(target.transform, Vector3.up);
 				this.BroadcastMessage("AttackAnimate", SendMessageOptions.DontRequireReceiver);
+				this.BroadcastMessage("AttackAnimate", new AttackInfo(target.gameObject, AttackDamage), SendMessageOptions.DontRequireReceiver);
 			}
 		}
 		// move towards enemy base
