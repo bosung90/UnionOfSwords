@@ -21,6 +21,6 @@ public class AttackParticleScript : MonoBehaviour {
 
 	void AttackAnimate(){
 		particleSystem.Play (true);
-		swordSound.Play ();
+		swordSound.PlayDelayed (0.2f);
 	}
 }
