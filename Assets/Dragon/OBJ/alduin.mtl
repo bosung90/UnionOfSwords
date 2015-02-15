@@ -1,0 +1,23 @@
+#  ==========================================================================
+#  Wavefront Material file
+#  Exported by Red-i Productions' "Riptide Pro"
+#  (a commercial plugin for Cinema 4D PC & Mac, R9.6 or later)
+#  
+#  Red-i Productions
+#  http://skinprops.com
+#  
+#  ==========================================================================
+
+newmtl Material
+Ns 50.781250
+illum 2
+Kd 0.800000 0.800000 0.800000
+map_Kd alduin.jpg
+
+newmtl Material.1
+Ns 50.781250
+illum 2
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+map_Ka alduineyes_g.jpg
+map_Kd alduineyes.jpg
