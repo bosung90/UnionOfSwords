@@ -3,7 +3,8 @@ using System.Collections;
 
 public class Attack_Footman : MonoBehaviour {
 
-	AudioSource swordSound;
+	private AudioSource swordSound;
+	public ParticleSystem _particleSystem;
 
 	// Use this for initialization
 	void Start () {
@@ -20,12 +21,12 @@ public class Attack_Footman : MonoBehaviour {
 	}
 
 	void AttackAnimate(AttackInfo attackInfo){
-		particleSystem.Play (true);
+		_particleSystem.Play (true);
 		swordSound.PlayDelayed (0.2f);
 		attackInfo.Target.SendMessage ("ApplyDamage", attackInfo.AttackDamage, SendMessageOptions.DontRequireReceiver);
 	}
 
 	void WalkAnimate(){
-		animation.Play ("walk", PlayMode.StopAll);
+		animation.Play ("Walk", PlayMode.StopAll);
 	}
 }

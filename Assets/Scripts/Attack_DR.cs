@@ -4,7 +4,7 @@ using System.Collections;
 public class Attack_DR : MonoBehaviour {
 
 	public GameObject Fire;
-	AudioSource roar;
+	public AudioSource roar;
 
 	// Use this for initialization
 	void Start () {

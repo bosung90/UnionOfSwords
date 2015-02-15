@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Attack_MG : MonoBehaviour {
 
-	AudioSource giantSound;
+	public AudioSource giantSound;
 
 	// Use this for initialization
 	void Start () {
