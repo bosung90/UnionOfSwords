@@ -11,6 +11,10 @@ public class GiantSound : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		giantSound.Play ();
+
 	}
+
+	void GiantAppear(){
+		giantSound.Play ();
+		}
 }
