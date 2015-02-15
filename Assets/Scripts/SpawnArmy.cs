@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class SpawnArmy : MonoBehaviour{
 
@@ -8,118 +9,58 @@ public class SpawnArmy : MonoBehaviour{
 	public float SpawnTimer = 3;
 
 	public PlayerBase.PlayerNum player;
-	public PlayerBase.UnitType type;
 
 	public int Health = 100;
 	public int MaxHealth = 100;
 
-	[Range(0,15)]
+	[Range(0,50)]
 	public int StatusCost = 1;
 
+	public GameObject particleSystemSpawn;
 
+	private float spawnTicker = 0;
+	public Image SpawnLoadImageUI;
+	public Color32 StartC, MiddleC, EndC;
 
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating ("SpawnUnit", 0, SpawnTimer);
+	}
+
+	void Update()
+	{
+		spawnTicker += Time.deltaTime;
+		if(spawnTicker >= SpawnTimer)
+		{
+			SpawnUnit();
+			spawnTicker = 0;
+		}
+		SpawnLoadImageUI.fillAmount = spawnTicker / SpawnTimer;
+		if(SpawnLoadImageUI.fillAmount < .5f)
+		{
+			SpawnLoadImageUI.color = Color.Lerp(StartC, MiddleC, SpawnLoadImageUI.fillAmount * 2);
+		}
+		else
+		{
+			SpawnLoadImageUI.color = Color.Lerp(MiddleC, EndC, ((SpawnLoadImageUI.fillAmount - 0.5f) * 2));
+		}
 	}
 
 	private void SpawnUnit()
 	{
 		if(player == PlayerBase.PlayerNum.PlayerOne)
 		{
-			switch(type)
+			if(Resource.currentResource_P1 >= StatusCost)
 			{
-			case PlayerBase.UnitType.Footman:
-					if(Resource.currentResource_P1 >= 5) 
-					{
-						SpwnUnit();
-					Resource.currentResource_P1 -= 5;
-					}
-				break;
-			case PlayerBase.UnitType.Ranger:
-					if(Resource.currentResource_P1 >= 6) 
-					{
-						SpwnUnit();
-						Resource.currentResource_P1 -= 6;
-					}
-				break;
-			case PlayerBase.UnitType.Arcane_Magician:
-					if(Resource.currentResource_P1 >= 6) 
-					{
-						SpwnUnit();
-						Resource.currentResource_P1 -= 6;
-					}
-				break;
-			case PlayerBase.UnitType.Mountain_Giant:
-					if(Resource.currentResource_P1 >= 25) 
-					{
-						SpwnUnit();
-						Resource.currentResource_P1 -= 25;
-					}
-				break;
-			case PlayerBase.UnitType.Dragon_Rider:
-					if(Resource.currentResource_P1 >= 60) 
-					{
-						SpwnUnit();
-						Resource.currentResource_P1 -= 60;
-					}
-				break;
-			case PlayerBase.UnitType.Warlock:
-					if(Resource.currentResource_P1 >= 40) 
-					{
-						SpwnUnit();
-						Resource.currentResource_P1 -= 40;
-					}
-				break;
-
+				SpwnUnit();
+				Resource.currentResource_P1 -= StatusCost;
 			}
-		}else if(player == PlayerBase.PlayerNum.PlayerTwo)
+		}
+		else if(player == PlayerBase.PlayerNum.PlayerTwo)
 		{
-			switch(type)
+			if(Resource.currentResource_P2 >= StatusCost)
 			{
-			case PlayerBase.UnitType.Footman:
-				if(Resource.currentResource_P2 >= 5) 
-				{
-					SpwnUnit();
-					Resource.currentResource_P2 -= 5;
-				}
-				break;
-			case PlayerBase.UnitType.Ranger:
-				if(Resource.currentResource_P2 >= 6) 
-				{
-					SpwnUnit();
-					Resource.currentResource_P2 -= 6;
-				}
-				break;
-			case PlayerBase.UnitType.Arcane_Magician:
-				if(Resource.currentResource_P2 >= 6) 
-				{
-					SpwnUnit();
-					Resource.currentResource_P2 -= 6;
-				}
-				break;
-			case PlayerBase.UnitType.Mountain_Giant:
-				if(Resource.currentResource_P2 >= 25) 
-				{
-					SpwnUnit();
-					Resource.currentResource_P2 -= 25;
-				}
-				break;
-			case PlayerBase.UnitType.Dragon_Rider:
-				if(Resource.currentResource_P2 >= 60) 
-				{
-					SpwnUnit();
-					Resource.currentResource_P2 -= 60;
-				}
-				break;
-			case PlayerBase.UnitType.Warlock:
-				if(Resource.currentResource_P2 >= 40) 
-				{
-					SpwnUnit();
-					Resource.currentResource_P2 -= 40;
-				}
-				break;
-				
+				SpwnUnit();
+				Resource.currentResource_P2 -= StatusCost;
 			}
 		}
 	}
@@ -132,6 +73,7 @@ public class SpawnArmy : MonoBehaviour{
 		newUnit.tag = this.player.ToString ();
 		Targetable targetable = newUnit.GetComponent<Targetable> ();
 		targetable.player = this.player;
+		particleSystemSpawn.particleSystem.Play (true);
 	}
 
 }
