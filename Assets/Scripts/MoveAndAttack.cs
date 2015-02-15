@@ -69,6 +69,7 @@ public class MoveAndAttack : MonoBehaviour
 				canAttack = false;
 				animation.Play ("Attack",  PlayMode.StopAll);
 				this.transform.LookAt(target.transform, Vector3.up);
+				this.BroadcastMessage("AttackAnimate", SendMessageOptions.DontRequireReceiver);
 			}
 		}
 		// move towards enemy base
