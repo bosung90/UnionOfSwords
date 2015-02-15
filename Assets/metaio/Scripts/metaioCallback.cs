@@ -8,7 +8,7 @@ using metaio.unitycommunication.util;
 public class metaioCallback : MonoBehaviour 
 {
 
-	public GameObject[] metaioTrackers;
+//	public GameObject[] metaioTrackers;
 
 #region metaio SDK callbacks
 	
@@ -29,15 +29,30 @@ public class metaioCallback : MonoBehaviour
 	{
 		foreach(TrackingValues t in trackingValues)
 		{
-			if(metaioTrackers[t.coordinateSystemID-1] == null) {
+//			if(metaioTrackers[t.coordinateSystemID-1] == null) {
+//				continue;
+//			}else if(t.state == TrackingState.Found)
+//			{
+//				metaioTrackers[t.coordinateSystemID-1].SetActive(true);
+//				metaioTrackers[t.coordinateSystemID-1].renderer.enabled = true;
+//			}
+//			else if(t.state == TrackingState.Lost)
+//				metaioTrackers[t.coordinateSystemID-1].SetActive(false);
+
+			GameObject tracker = GameObject.Find("metaioTracker" + t.coordinateSystemID);
+			GameObject child = (tracker==null)?null:tracker.transform.GetChild(0).gameObject;
+
+			if(child==null)
 				continue;
-			}else if(t.state == TrackingState.Found)
+
+			if(t.state == TrackingState.Found)
 			{
-				metaioTrackers[t.coordinateSystemID-1].SetActive(true);
-				metaioTrackers[t.coordinateSystemID-1].renderer.enabled = true;
+				child.SetActive(true);
+				if(child.renderer!=null)
+					child.renderer.enabled = true;
 			}
 			else if(t.state == TrackingState.Lost)
-				metaioTrackers[t.coordinateSystemID-1].SetActive(false);
+				child.SetActive(false);
 		}
 	}
 	
