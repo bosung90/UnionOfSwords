@@ -7,14 +7,12 @@ public class Resource : MonoBehaviour {
 	public PlayerBase.PlayerNum player;
 
 	Text resource;
-	public static int currentResource_P1;
-	public static int currentResource_P2;
+	public static int currentResource_P1 = 20;
+	public static int currentResource_P2 = 20;
 	
 	// Use this for initialization
 	void Start () {
 		resource = GetComponent<Text> ();
-		currentResource_P1 = 20;
-		currentResource_P2 = 20;
 		resource.text = "Resource : " + 20;
 		InvokeRepeating ("income", 0, 1);
 	}
