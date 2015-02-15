@@ -5,6 +5,10 @@ public class AttackParticleScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		foreach(ParticleSystem ps in GetComponents<ParticleSystem>())
+			ps.startDelay = 0.2f;
+		foreach(ParticleSystem ps in GetComponentsInChildren<ParticleSystem>())
+			ps.startDelay = 0.2f;
 	
 	}
 	
@@ -15,5 +19,6 @@ public class AttackParticleScript : MonoBehaviour {
 
 	void AttackAnimate(){
 		particleSystem.Play (true);
+		
 	}
 }
