@@ -13,6 +13,7 @@ public class Attack_Warlock : MonoBehaviour {
 	
 	}
 
-	void AttackAnimate(){
+	void AttackAnimate(AttackInfo attackInfo){
+		attackInfo.Target.SendMessage ("ApplyDamage", attackInfo.AttackDamage, SendMessageOptions.DontRequireReceiver);
 	}
 }

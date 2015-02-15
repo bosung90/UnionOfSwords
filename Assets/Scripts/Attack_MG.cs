@@ -14,6 +14,7 @@ public class Attack_MG : MonoBehaviour {
 	
 	}
 
-	void AttackAnimate(){
+	void AttackAnimate(AttackInfo attackInfo){
+		attackInfo.Target.SendMessage ("ApplyDamage", attackInfo.AttackDamage, SendMessageOptions.DontRequireReceiver);
 	}
 }

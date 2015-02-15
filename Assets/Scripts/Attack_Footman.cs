@@ -19,8 +19,9 @@ public class Attack_Footman : MonoBehaviour {
 	
 	}
 
-	void AttackAnimate(){
+	void AttackAnimate(AttackInfo attackInfo){
 		particleSystem.Play (true);
 		swordSound.PlayDelayed (0.2f);
+		attackInfo.Target.SendMessage ("ApplyDamage", attackInfo.AttackDamage, SendMessageOptions.DontRequireReceiver);
 	}
 }
