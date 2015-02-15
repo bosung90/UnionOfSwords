@@ -8,7 +8,7 @@ public class Targetable : MonoBehaviour {
 	public PlayerBase.PlayerNum player;
 	public PlayerBase.UnitType type;
 	[Range(0,100)]
-	public int StatusCost = 1;
+	public int ValueWhenKilled = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -78,11 +78,11 @@ public class Targetable : MonoBehaviour {
 	public void getResource() {
 		if(player == PlayerBase.PlayerNum.PlayerTwo) 
 		{
-			Resource.currentResource_P1 += StatusCost;
+			Resource.currentResource_P1 += ValueWhenKilled;
 		}
 		else if(player == PlayerBase.PlayerNum.PlayerOne)
 		{
-			Resource.currentResource_P2 += StatusCost;
+			Resource.currentResource_P2 += ValueWhenKilled;
 		}
 	}
 

@@ -15,7 +15,7 @@ public class MoveAndAttack : MonoBehaviour
 	public float AttackRange = 2;
 	[Range(0.01f, 5f)]
 	public float AttackSpeed = 2;
-	[Range(1, 200)]
+	[Range(0, 200)]
 	public float AttackDamage = 10f;
 	
 	//	private Animation animation;
