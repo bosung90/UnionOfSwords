@@ -7,6 +7,8 @@ public class MoveAndAttack : MonoBehaviour
 	private string enemyTag;
 	private bool canAttack = true;
 
+	public PlayerBase.AttackType attackType;
+
 	[Range(0f,15f)]
 	public float speed = 2;
 	[Range(0.5f, 100f)]
@@ -92,13 +94,19 @@ public class MoveAndAttack : MonoBehaviour
 		foreach (Collider col in cols)
 		{
 			if (col && ( col.tag == enemyTag || col.tag == enemyBase.tag))
-			{ 
-				float distance = Vector3.Distance(transform.position, col.transform.position);
-				if(distance<smallestDistance)
+			{
+				if(col.GetComponent<Targetable>().type == PlayerBase.UnitType.Dragon_Rider && attackType == PlayerBase.AttackType.Ground)
+					continue;
+				else
 				{
-					smallestDistance = distance;
-					closestTarget = col;					
+					float distance = Vector3.Distance(transform.position, col.transform.position);
+					if(distance<smallestDistance)
+					{
+						smallestDistance = distance;
+						closestTarget = col;					
+					}
 				}
+
 			}	
 		}
 		return closestTarget;
