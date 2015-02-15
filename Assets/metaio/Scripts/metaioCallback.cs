@@ -29,30 +29,29 @@ public class metaioCallback : MonoBehaviour
 	{
 		foreach(TrackingValues t in trackingValues)
 		{
-//			if(metaioTrackers[t.coordinateSystemID-1] == null) {
-//				continue;
-//			}else if(t.state == TrackingState.Found)
-//			{
-//				metaioTrackers[t.coordinateSystemID-1].SetActive(true);
-//				metaioTrackers[t.coordinateSystemID-1].renderer.enabled = true;
-//			}
-//			else if(t.state == TrackingState.Lost)
-//				metaioTrackers[t.coordinateSystemID-1].SetActive(false);
-
 			GameObject tracker = GameObject.Find("metaioTracker" + t.coordinateSystemID);
-			GameObject child = (tracker==null)?null:tracker.transform.GetChild(0).gameObject;
 
-			if(child==null)
+			if(tracker==null)
 				continue;
 
 			if(t.state == TrackingState.Found)
 			{
-				child.SetActive(true);
-				if(child.renderer!=null)
-					child.renderer.enabled = true;
+				for(int i=0; i<tracker.transform.childCount; i++)
+				{
+					GameObject child = tracker.transform.GetChild(i).gameObject;
+					child.SetActive(true);
+					if(child.renderer!=null)
+						child.renderer.enabled = true;
+				}
 			}
 			else if(t.state == TrackingState.Lost)
-				child.SetActive(false);
+			{
+				for(int i=0; i<tracker.transform.childCount; i++)
+				{
+					GameObject child = tracker.transform.GetChild(i).gameObject;
+					child.SetActive(false);
+				}
+			}
 		}
 	}
 	
