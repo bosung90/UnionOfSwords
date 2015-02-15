@@ -38,8 +38,12 @@ public class MoveAndAttack : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if(!animation.isPlaying)
-			animation.Play("Wait",  PlayMode.StopAll);
+
+						
+		if(animation != null) {
+			if(!animation.isPlaying)
+				animation.Play("Wait",  PlayMode.StopAll);
+		}
 		
 		if(enemyBase == null)
 		{
@@ -68,8 +72,9 @@ public class MoveAndAttack : MonoBehaviour
 				//call attack(target)		
 				Debug.Log("Attack");
 				target.SendMessage("ApplyDamage", AttackDamage, SendMessageOptions.DontRequireReceiver);
-				
-				animation.Play ("Attack",  PlayMode.StopAll);
+				if(animation != null) {
+					animation.Play ("Attack",  PlayMode.StopAll);
+				}
 				this.transform.LookAt(target.transform, Vector3.up);
 				//this.BroadcastMessage("AttackAnimate", SendMessageOptions.DontRequireReceiver);
 				this.BroadcastMessage("AttackAnimate", new AttackInfo(target.gameObject, AttackDamage), SendMessageOptions.DontRequireReceiver);
@@ -83,7 +88,9 @@ public class MoveAndAttack : MonoBehaviour
 			Vector3 enemyBasePos = enemyBase.transform.position;
 			float step = speed * Time.deltaTime;
 			transform.position = Vector3.MoveTowards (currentPos, enemyBasePos, step);
-			animation.Play ("Walk",  PlayMode.StopAll);
+			if(animation != null) {
+				animation.Play ("Walk",  PlayMode.StopAll);
+			}
 			this.BroadcastMessage("WalkAnimate", SendMessageOptions.DontRequireReceiver);
 			this.transform.LookAt(enemyBasePos, Vector3.up);
 		}
