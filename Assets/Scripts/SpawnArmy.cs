@@ -30,45 +30,45 @@ public class SpawnArmy : MonoBehaviour{
 			switch(type)
 			{
 			case PlayerBase.UnitType.Footman:
-					if(Resource_P1.currentResource >= 5) 
+					if(Resource.currentResource_P1 >= 5) 
 					{
 						SpwnUnit();
-						Resource_P1.currentResource -= 5;
+					Resource.currentResource_P1 -= 5;
 					}
 				break;
 			case PlayerBase.UnitType.Ranger:
-					if(Resource_P1.currentResource >= 6) 
+					if(Resource.currentResource_P1 >= 6) 
 					{
 						SpwnUnit();
-						Resource_P1.currentResource -= 6;
+						Resource.currentResource_P1 -= 6;
 					}
 				break;
 			case PlayerBase.UnitType.Arcane_Magician:
-					if(Resource_P1.currentResource >= 6) 
+					if(Resource.currentResource_P1 >= 6) 
 					{
 						SpwnUnit();
-						Resource_P1.currentResource -= 6;
+						Resource.currentResource_P1 -= 6;
 					}
 				break;
 			case PlayerBase.UnitType.Mountain_Giant:
-					if(Resource_P1.currentResource >= 25) 
+					if(Resource.currentResource_P1 >= 25) 
 					{
 						SpwnUnit();
-						Resource_P1.currentResource -= 25;
+						Resource.currentResource_P1 -= 25;
 					}
 				break;
 			case PlayerBase.UnitType.Dragon_Rider:
-					if(Resource_P1.currentResource >= 60) 
+					if(Resource.currentResource_P1 >= 60) 
 					{
 						SpwnUnit();
-						Resource_P1.currentResource -= 60;
+						Resource.currentResource_P1 -= 60;
 					}
 				break;
 			case PlayerBase.UnitType.Warlock:
-					if(Resource_P1.currentResource >= 40) 
+					if(Resource.currentResource_P1 >= 40) 
 					{
 						SpwnUnit();
-						Resource_P1.currentResource -= 40;
+						Resource.currentResource_P1 -= 40;
 					}
 				break;
 
@@ -78,45 +78,45 @@ public class SpawnArmy : MonoBehaviour{
 			switch(type)
 			{
 			case PlayerBase.UnitType.Footman:
-				if(Resource_P2.currentResource >= 5) 
+				if(Resource.currentResource_P2 >= 5) 
 				{
 					SpwnUnit();
-					Resource_P2.currentResource -= 5;
+					Resource.currentResource_P2 -= 5;
 				}
 				break;
 			case PlayerBase.UnitType.Ranger:
-				if(Resource_P2.currentResource >= 6) 
+				if(Resource.currentResource_P2 >= 6) 
 				{
 					SpwnUnit();
-					Resource_P2.currentResource -= 6;
+					Resource.currentResource_P2 -= 6;
 				}
 				break;
 			case PlayerBase.UnitType.Arcane_Magician:
-				if(Resource_P2.currentResource >= 6) 
+				if(Resource.currentResource_P2 >= 6) 
 				{
 					SpwnUnit();
-					Resource_P2.currentResource -= 6;
+					Resource.currentResource_P2 -= 6;
 				}
 				break;
 			case PlayerBase.UnitType.Mountain_Giant:
-				if(Resource_P2.currentResource >= 25) 
+				if(Resource.currentResource_P2 >= 25) 
 				{
 					SpwnUnit();
-					Resource_P2.currentResource -= 25;
+					Resource.currentResource_P2 -= 25;
 				}
 				break;
 			case PlayerBase.UnitType.Dragon_Rider:
-				if(Resource_P2.currentResource >= 60) 
+				if(Resource.currentResource_P2 >= 60) 
 				{
 					SpwnUnit();
-					Resource_P2.currentResource -= 60;
+					Resource.currentResource_P2 -= 60;
 				}
 				break;
 			case PlayerBase.UnitType.Warlock:
-				if(Resource_P2.currentResource >= 40) 
+				if(Resource.currentResource_P2 >= 40) 
 				{
 					SpwnUnit();
-					Resource_P2.currentResource -= 40;
+					Resource.currentResource_P2 -= 40;
 				}
 				break;
 				

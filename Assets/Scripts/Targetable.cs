@@ -7,6 +7,22 @@ public class Targetable : MonoBehaviour {
 	public int MaxHealth = 100;
 	public PlayerBase.PlayerNum player;
 	public PlayerBase.UnitType type;
+	[Range(1, 100)]
+	public int Footman_Cost = 3;
+	[Range(1, 100)]
+	public int Ranger_Cost = 3;
+	[Range(1, 100)]
+	public int A_Magician_Cost = 3;
+	[Range(1, 100)]
+	public int M_Giant_Cost = 3;
+	[Range(1, 100)]
+	public int Dragon_Cost = 3;
+	[Range(1, 100)]
+	public int Warlock_Cost = 3;
+	[Range(1, 200)]
+	public int Tower_Cost = 3;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -68,36 +84,36 @@ public class Targetable : MonoBehaviour {
 		if(player == PlayerBase.PlayerNum.PlayerTwo) 
 		{
 			if(type == PlayerBase.UnitType.Footman)
-				Resource_P1.currentResource += 7;
+				Resource.currentResource_P1 += Footman_Cost;
 			else if(type == PlayerBase.UnitType.Ranger)
-				Resource_P1.currentResource += 9;
+				Resource.currentResource_P1 += Ranger_Cost;
 			else if(type == PlayerBase.UnitType.Arcane_Magician)
-				Resource_P1.currentResource += 21;
+				Resource.currentResource_P1 += A_Magician_Cost;
 			else if(type == PlayerBase.UnitType.Mountain_Giant)
-				Resource_P1.currentResource += 35;
+				Resource.currentResource_P1 += M_Giant_Cost;
 			else if(type == PlayerBase.UnitType.Dragon_Rider)
-				Resource_P1.currentResource += 84;
+				Resource.currentResource_P1 += Dragon_Cost;
 			else if(type == PlayerBase.UnitType.Warlock)
-				Resource_P1.currentResource += 56;
+				Resource.currentResource_P1 += Warlock_Cost;
 			else if(type == PlayerBase.UnitType.Turret)
-				Resource_P1.currentResource += 100;
+				Resource.currentResource_P1 += Tower_Cost;
 		}
 		else if(player == PlayerBase.PlayerNum.PlayerOne)
 		{
 			if(type == PlayerBase.UnitType.Footman)
-				Resource_P2.currentResource += 7;
+				Resource.currentResource_P2 += Footman_Cost;
 			else if(type == PlayerBase.UnitType.Ranger)
-				Resource_P2.currentResource += 9;
+				Resource.currentResource_P2 += Ranger_Cost;
 			else if(type == PlayerBase.UnitType.Arcane_Magician)
-				Resource_P2.currentResource += 21;
+				Resource.currentResource_P2 += A_Magician_Cost;
 			else if(type == PlayerBase.UnitType.Mountain_Giant)
-				Resource_P2.currentResource += 35;
+				Resource.currentResource_P2 += M_Giant_Cost;
 			else if(type == PlayerBase.UnitType.Dragon_Rider)
-				Resource_P2.currentResource += 84;
+				Resource.currentResource_P2 += Dragon_Cost;
 			else if(type == PlayerBase.UnitType.Warlock)
-				Resource_P2.currentResource += 56;
+				Resource.currentResource_P2 += Warlock_Cost;
 			else if(type == PlayerBase.UnitType.Turret)
-				Resource_P2.currentResource += 100;
+				Resource.currentResource_P2 += Tower_Cost;
 		}
 	}
 
